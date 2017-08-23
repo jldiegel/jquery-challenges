@@ -42,6 +42,48 @@
   //code in here wont run until page loads
   $(function(){
 
+    let shoot1Button = $('#teamone-shoot')
+    let shoot2Button = $('#teamtwo-shoot')
+    let resetButton = $('#reset');
+
+    shoot1Button.click(function(){
+
+      $('#teamone-numshots').html(parseInt($('#teamone-numshots').html()) + 1)
+
+      let randomNumber1 = Math.random()
+
+      if (randomNumber1 > .88) {
+        $('#teamone-numhits').html(parseInt($('#teamone-numhits').html()) + 1)
+
+        $('body').css({background:"blue"})
+      }
+    })
+
+    shoot2Button.click(function(){
+
+      $('#teamtwo-numshots').html(parseInt($('#teamtwo-numshots').html()) + 1)
+
+      let randomNumber2 = Math.random()
+
+      if (randomNumber2 > .88) {
+
+        $('#teamtwo-numhits').html(parseInt($('#teamtwo-numhits').html()) + 1)
+
+        $('body').css({background:"red"})
+      }
+    })
+
+    resetButton.click(function(){
+
+      $('#num-resets').html(parseInt($('#num-resets').html()) + 1)
+      $('#teamone-numshots').html(0)
+      $('#teamone-numhits').html(0)
+      $('#teamtwo-numshots').html(0)
+      $('#teamtwo-numhits').html(0)
+      $('body').css({background:"white"})
+
+    })
+
 
 
   })
