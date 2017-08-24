@@ -35,13 +35,21 @@
    //code in here wont run until page loads
    $(function(){
 
-     $('h1').click(function(){
-       $(this).css({color:"red"})
 
-       $('h1').click(function(){
-         $(this).css({color:"black"})
-       })
-     })
+    $('h1').click(function(){
+      if ($(this).css('color')=="rgb(0, 0, 0)"){
+        $(this).css({color:"red"})
+      }
+      else {
+        $(this).css({color:"black"})
+      }
+    })
+
+    
+
+
+
+
 
 
 
